@@ -1,20 +1,20 @@
 # hiwifi-ss
 
+> We shall fight on the beaches.
+
 极路由+ss配置, 适应新版极路由，支持的极路由版本有(__因为没办法测试所有的极路由，所以你能运行的极路由不在这个列表，请在[issue#38](https://github.com/qiwihui/hiwifi-ss/issues/38)中回复，谢谢！__):
 
 现在项目使用的是大陆白名单模式，关于适用大陆白名单和gfwlsit的处理，见[issue#37](https://github.com/qiwihui/hiwifi-ss/issues/37)。项目中的gfw规则使用项目 [cokebar/gfwlist2dnsmasq](https://github.com/cokebar/gfwlist2dnsmasq) 生成的规则修改而成，最后更新日期为2016.08.07。
 
 ### 安装方法
 
-1. 旧版hiwifi => 请参见博客: [极路由Shadowsocks家庭无痛翻墙实践](https://luolei.org/hiwifi-shadowsocks/)
-
-2. 新版hiwifi => 使用项目根目录下的 `shadow.sh` 脚本进行安装, 建议使用以下一键命令:
+1. 新版hiwifi => 使用项目根目录下的 `shadow.sh` 脚本进行安装, 建议使用以下一键命令:
 
    ```sh
    cd /tmp && curl -k -o shadow.sh https://raw.githubusercontent.com/qiwihui/hiwifi-ss/master/shadow.sh && sh shadow.sh && rm shadow.sh
    ```
 
-3.  hiwifi 1.2.5.15805s 
+2.  hiwifi 1.2.5.15805s 
 
    ```sh
    cd /tmp && curl -k -o shadow.sh https://raw.githubusercontent.com/qiwihui/hiwifi-ss/master/shadow.sh && sh shadow.sh 12515805s && rm shadow.sh
@@ -85,21 +85,28 @@
 
 ### TODO
 
- - [x] 适应新版本界面
+1. 第一阶段
 
-   - [x] 开关样式
-   - [x] 增加"shadowsocks设置"按钮
-   - [x] "shadowsocks设置"按钮功能修复
-   - [x] 密码显示功能修复
-   - [x] 弹出提示框修复
-   - [x] 下拉框样式修复
-   - [x] "导入配置文件(json格式)"界面修复; 界面修复了，但是底层功能有问题；
-   - [x] "高级设置"界面修复
+  - [x] 适应新版本界面
+ 
+    - [x] 开关样式
+    - [x] 增加"shadowsocks设置"按钮
+    - [x] "shadowsocks设置"按钮功能修复
+    - [x] 密码显示功能修复
+    - [x] 弹出提示框修复
+    - [x] 下拉框样式修复
+    - [x] "导入配置文件(json格式)"界面修复; 界面修复了，但是底层功能有问题；
+    - [x] "高级设置"界面修复
+ 
+  - [x] release/v1.1.0 => 完成之前所有功能在新版下的界面适配
+  - [x] 使用github作为文件存储, 既然能用 `raw.githubusercontent.com` 下脚本，下载 `ss.tar.gz` 应该也不成问题，只是慢些；
+  - [x] 底层增加更多的路由规则
+  - [x] 关于底层源码开源的一些问题
+ 
+2. 下一阶段
 
- - [x] release/v1.1.0 => 完成之前所有功能在新版下的界面适配
- - [x] 使用github作为文件存储, 既然能用 `raw.githubusercontent.com` 下脚本，下载 `ss.tar.gz` 应该也不成问题，只是慢些；
- - [x] 底层增加更多的路由规则
- - [x] 关于底层源码开源的一些问题
+  - [ ] 升级 SS 版本
+  - [ ] 支持 SSR
 
 ### 贡献
 
@@ -111,14 +118,7 @@
 
 1. 新版界面
 
-(1). ss子菜单在网络设置下:
-
-  ![](./ss-menu.png)
-
-(2). ss账号设置
+(1). ss账号设置
 
   ![](./ss-settings.png)
 
-(3). ss高级设置
-
-  ![](./ss-advance.png)
